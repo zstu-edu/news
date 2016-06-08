@@ -7,6 +7,15 @@ header{
 	background-color: #f3f3f3;
 	border-bottom: 1px solid #ddd;
 }
+.top-loader-bar{
+	position: fixed;
+	top:0;
+	left:0;
+	width: 0;
+	height: 2px;
+	background-color: #77b6ff;
+	box-shadow:0 0 10px rgba(119,182,255,0.7);
+}
 aside{
 	display: inline-block;
 	width:15%;
@@ -49,7 +58,7 @@ article{
 	width:85%;
 	min-width: 850px;
 	min-height: 700px;
-	padding:20px 0;
+	padding:20px 20px;
 	border-left:1px solid #eee;
 }
 .title{
@@ -58,16 +67,19 @@ article{
 	color:#999;
 }
 
-.post-list > li{
-	padding:10px 0  3px 5px;																													;
+.post-list > li{																												;
 	list-style: none;
 	border-bottom: 1px solid #eee;
 }
 .post-list > li > a{
+	display: block;
+	padding:10px 0  3px 5px;	
 	color:#999;
 	text-decoration: none;
 }
-
+.post-list > li > a:hover{
+	color:#666;
+}
 footer{
 	height:50px;
 	background-color: #eeeeee;

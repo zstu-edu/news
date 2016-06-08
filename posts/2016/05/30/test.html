@@ -7,27 +7,29 @@
 	<link rel="shortcut icon" href="/favicon.ico" type="/image/x-icon" />
 	<meta name="keywords" content="xiebaochun,sunshine of micro,front-end,zstu,edu,zhejiang hangzhou" />
 	<meta name="description" content="xiebaochun's blog of front end technology" />
-	<link rel="stylesheet" type="text/css" href="./css/common.css">
-	<link rel="stylesheet" type="text/css" href="./css/index.css">
-	<link rel="stylesheet" type="text/css" href="./css/layout.css">
+	<link rel="stylesheet" type="text/css" href="/blog/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/blog/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="/blog/css/index.css">
 </head>
 <body>
 <div class="wrap">
 	<header>
+	<div class="top-loader-bar" id="top-loader-bar"></div>
 	<div>
-		<a href="./index.html"><span class="title">THE SUNSHINE OF MICRO</span></a>
+		<a style="display:inline-block;line-height:60px;" href="/blog/index.html"><span class="title">THE SUNSHINE OF MICRO</span></a>
 	</div>
 </header>
 	<aside>
     <span class="cate-txt">Categories</span> 
 	<ul>
-		<li>web</li>
+		<!-- <li>web</li>
 		<li>android</li>
 		<li>ios</li>
 		<li>life</li>
 		<li>game</li>
 		<li>book</li>
-		<li>php</li>
+		<li>php</li> -->
+		<li><a href="/blog/categories-node.js.html">node.js</a></li><li><a href="/blog/categories-Data Structure.html">Data Structure</a></li><li><a href="/blog/categories-ios.html">ios</a></li><li><a href="/blog/categories-life.html">life</a></li><li><a href="/blog/categories-web.html">web</a></li>
 	</ul>
 </aside><article>
 		<div class="markdown-body">
@@ -53,14 +55,26 @@
 </code></pre>
 <h2>Reference</h2>
 <p><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a></p>
-	
+<script>								var idcomments_acct = '1d91760ed815800e7c6d113414d302cf';								var idcomments_post_id;								var idcomments_post_url;								</script>								<span id="IDCommentsPostTitle" style="display:none"></span>								<script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>	
 		</div>
-			
 	</article>
 	<footer>
 	<span class="copy-right">© 2016 sunshine of micro, Inc.</span>
 </footer>	
 </div>
-
+<script type="text/javascript" src="/blog/js/common.js"></script>
+<script>
+	console.log($('.top-loader-bar'));
+	//$('#top-loader-bar').dom.style.width  = '50%';
+	var step = 0;
+	var loader = setInterval(function(){
+		step ++;
+		$('#top-loader-bar').dom.style.width = step + '%';
+		if(step >= 100) {
+			clearInterval(loader);
+			$('#top-loader-bar').dom.style.width = 0;
+		}
+	},1);
+</script>
 </body>
 </html>
